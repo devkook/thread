@@ -23,7 +23,6 @@ public class Work implements Runnable{
             InputStreamReader in = new InputStreamReader(socket.getInputStream());
 
             char[] rBuf = new char[1000];
-            int readMsg = in.read(rBuf);
 
             String msg = String.valueOf(rBuf).trim();
 
@@ -36,7 +35,7 @@ public class Work implements Runnable{
                 e.printStackTrace();
             }
 
-            out.println("무슨 뜻이지 ? 쉽게 다시 알려 주세요 : D => " + readMsg);
+            out.println("무슨 뜻이지 ? 쉽게 다시 알려 주세요 : D => " + msg);
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
